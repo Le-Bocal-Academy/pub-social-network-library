@@ -3,7 +3,7 @@
  */
 
 /* Import */
-import { apiUrl } from "../config.json";
+import config from "../config.json";
 
 /**
  * Fetch from api
@@ -53,7 +53,7 @@ export default async function fetchFromApi(
     }
 
     /* Request */
-    const response = await fetch(apiUrl + path + queryParameters, options);
+    const response = await fetch(config.apiUrl + path + queryParameters, options);
 
     /* Response codes */
     switch (response.status) {
